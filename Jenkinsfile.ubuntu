@@ -31,7 +31,7 @@ pipeline {
                     dir("${env.WORKSPACE}"){
                         sh "pwd"
                         echo '>>> ---------- Start Building the WebUI Image -------------'
-                        sh "BUILDPLATFORM=linux/amd64 docker build -t afxm-ollama-webui:${env.VERSION} . "
+                        sh "docker build -t afxm-ollama-webui:${env.VERSION} . "
                         echo '<<< ---------- End Building the WebUI Image -------------'
                     }
                 }
